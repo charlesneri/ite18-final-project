@@ -1,12 +1,14 @@
+
 body {
   background-color: rgb(39, 39, 39);
+  
 }
 nav {
   padding-top: 5%;
   padding-bottom: 200%;
 }
 #one-list {
-  margin-bottom: 80%;
+  margin-bottom: 60%;
 }
 
 li {
@@ -22,9 +24,22 @@ li {
   margin-left: 2%;
   border-radius: 2%;
 }
-
+#search{
+  border-radius: 2%;
+  margin-top: 50%;
+}
+.search-icon
+{
+  position: absolute;
+  right: 10px; /* Adjust to align with your padding */
+  top: 90%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #717171;
+  pointer-events: none; /* Prevent clicks on the icon */
+}
 h1 {
-  color: green;
+  color: #ffff;
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 5%;
@@ -45,7 +60,7 @@ h1 {
  
 }
 .dragon{
-  color: blue;
+  color: #fff;
   display:flex;
   text-align: left;
   padding: 2%;
@@ -55,11 +70,11 @@ h1 {
 }
 .buttons{
   padding: 10%;
-  text-align: center;
+  text-align: left;
 }
 #add-product,#cancel{
   margin: 5%;
 }
 .size{
-  width: 50%;
+  width: 60%;
 }
