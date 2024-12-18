@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(39, 39, 39);
+}
+nav {
+  padding-top: 5%;
+  padding-bottom: 200%;
+}
+#one-list {
+  margin-bottom: 80%;
+}
+
+li {
+  list-style-type: none;
+}
+.menus {
+  padding: 2%;
+  border: hidden;
+  background-color: whitesmoke;
+}
+
+.container .sidebar {
+  margin-left: 2%;
+  border-radius: 2%;
+}
+
+h1 {
+  color: green;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  letter-spacing: .2rem;
+}
+.container .product-section #form-prod {
+  float: left;
+  margin-left: 15%;
+  margin-top: 2%;
+ 
+}
+.container .product-section {
+  float: left;
+  margin-left: 30%;
+  margin-top: 2%;
+ 
+}
+.dragon{
+  color: blue;
+  display:flex;
+  text-align: left;
+  padding: 2%;
+}
+.drag{
+  display: flex;
+}
+.buttons{
+  padding: 10%;
+  text-align: center;
+}
+#add-product,#cancel{
+  margin: 5%;
+}
+.size{
+  width: 50%;
+}

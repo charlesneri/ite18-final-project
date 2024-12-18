@@ -1,0 +1,36 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: aqua;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column; /* Stack inputs vertically */
+  gap: 15px;
+}
+input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 5%;
+  text-indent: 3%;
+}
+
+.container,
+.reg-forms {
+  text-align: center;
+}
+.reg-forms {
+  margin-top: 10%;
+}
+.buttons input[type="submit"] {
+  margin-top: 2%;
+  font-size: 1rem;
+  padding: 0.5%;
+  border-radius: 5%;
+  width: 60%;
+}
+.buttons input[type="submit"]:hover {
+  color: rgb(97, 97, 245);
+}

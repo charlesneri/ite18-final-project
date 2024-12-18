@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory site</title>
+    <link rel="stylesheet" href="/botsrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/invent.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="position-sticky mt-3 text-bg-light w-auto">
+          <div class="logo">
+            <img id="logo" src="/logo.png" alt="logo" width="50" />
+          </div>
+          <div
+            class="search-bar position-absolute top-0 start-50 translate-middle"
+          >
+            <i class="fa-solid fa-magnifying-glass w-5"></i>
+            <input
+              type="search"
+              placehoder="search"
+              name="search"
+              id="search"
+              class="mt-5"
+            />
+          </div>
+        </div>
+      </header>
+      <div class="container sidebar text-bg-light w-25 position-fixed start-0">
+        <nav clas="sidenav">
+          <ul id="one-list">
+            <li>
+              <a href="/html/log-in.html">
+                <button class="menus">
+                  <i class="fa-solid fa-house"></i>
+                  <span class="option"><b> Home</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-suitcase"></i>
+                  <span class="option"><b> Product</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-table-cells"></i
+                  ><span class="option"><b> Category</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-chart-line"></i
+                  ><span class="option"><b> Finance</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#products"
+                ><button class="menus">
+                  <i class="fa-solid fa-plus"></i
+                  ><span class="option"><b> Add product</b></span>
+                </button></a
+              >
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-gear"></i
+                  ><span class="option"><b> Settings</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-user"></i
+                  ><span class="option"><b> Create casher acoount</b></span>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><button class="menus">
+                  <i class="fa-solid fa-right-from-bracket"></i
+                  ><span class="option"><b>Log out</b></span>
+                </button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section id="product">
+        <div
+          class="container product-section position-relative text-bg-light w-25"
+        >
+          <h1>Add Products</h1>
+          <div class="drag">
+            <form action="" method="get" id="form-prod">
+              <div class="drags">
+                <label class="dragon" for="prod-name">Product Name </label>
+                <input type="text" id="prod-name" placeholder="Product name" />
+              </div>
+              <div class="drags">
+                <label class="dragon" for="category">Category</label>
+                <input
+                  type="text"
+                  id="category"
+                  placeholder="Product category"
+                />
+              </div>
+              <!--number-->
+              <div class="drags">
+                <label class="dragon" for="cost-price">Cost Price</label>
+                <input type="number" class="size" id="cost-price" />
+                <button class="unit" for="cost-price" type="menu">Unit</button>
+              </div>
+
+              <!---->
+              <div class="drags">
+                <label class="dragon" for="selling-price">Selling Price</label>
+                <input type="number" class="size" id="selling-price" />
+                <button class="unit" for="selling-price" type="menu">
+                  Unit
+                </button>
+              </div>
+              <!---->
+              <div class="drags">
+                <label class="dragon" for="wholesale">wholesale</label>
+                <input type="number" class="size" id="wholesale" />
+                <button class="unit" for="wholesale" type="menu">Unit</button>
+              </div>
+              <!---->
+              <div class="drags">
+                <label class="dragon" for="qty">Quantity</label>
+                <input type="number" class="size" id="qty" />
+                <button class="unit" for="qty" type="menu">Unit</button>
+              </div>
+              <!---->
+              <div class="buttons">
+                <input type="submit" name="Add product" id="add-product" />
+                <input type="reset" name="cancel" id="cancel" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
