@@ -6,6 +6,7 @@
     <title>Inventory site</title>
     <link rel="stylesheet" href="/botsrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/invent.css" />
+    <link rel="stylesheet" href="/js/invent.js">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -90,36 +91,81 @@
                   </div>
                   <!--done here-->
            <main>
-            <div class="container product-section w-50 position-relative start-25 text-center">
+            <div class="container product-section w-75 position-relative  text-center">
               <h1>Add Products</h1>
               
               <div class="drag">
                   <div class="drags me-5">
-                    <form action="" method="post" id="form-prod"></form>
+                    <form action="" method="post" id="add-item">
+                    <label class="dragon" for="serial-no">Serial No. </label>
+                    <input
+                      type="text"
+                      id="serial-no"
+                      placeholder="Enter Serial No."
+                    />
                     <label class="dragon" for="prod-name">Product Name </label>
                     <input
                       type="text"
                       id="prod-name"
                       placeholder="Product name"
                     />
-                  </div>
-                  <div class="drags ms-5">
-                    <label class="dragon " for="category">Category</label>
+                    <label class="dragon" for="category">Category </label>
                     <input
                       type="text"
                       id="category"
-                      placeholder="Product category"
+                      placeholder="Product name"
                     />
                   </div>
-                  
-                  <div class="drags">
-                    <label class="dragon" for="cost-price">Cost Price</label>
+                    <div class="drags ms-5">
+                    <label class="dragon" for="qty">Quantity</label>
+                    <input type="number" class="size" id="qty" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                   <div class="drags">
+                    <label class="dragon" for="cost-price">Cost Price/Upon Purchase</label>
                     <input type="number" class="size" id="cost-price" />
                     <select name="unit" id="unit" placeholder="Unit">
                       <option value="title">Unit</option>
                       <option value="kilogram">kilogram</option>
                       <option value="grams">grams</option>
                       <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                  <div class="drags">
+                    <label class="dragon" for="peso-add">%/Peso Added</label>
+                    <input type="number" class="size" id="peso-add" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="">Unit</option>
+                     <option value="Peso">Peso</option>
+                     <option value="percent">Percent</option>
+                    </select>
+                  </div>
+                 
+                  <div class="drags">
+                    <label class="dragon" for="indiv-price"
+                      >Individual Price</label
+                    >
+                    <input type="number" class="size" id="indiv-price" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                 
+                  <div class="drags">
+                    <label class="dragon" for="wholesale">%/peso added Wholesale</label>
+                    <input type="number" class="size" id="wholesale" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="">Unit</option>
+                      <option value="Peso">Peso</option>
+                      <option value="percent">Percent</option>
                     </select>
                   </div>
                   <div class="drags">
@@ -133,41 +179,19 @@
                       <option value="grams">grams</option>
                       <option value="pieces">pieces</option>
                     </select>
-                  </div>
-                  
+                  </div>  
                   <div class="drags">
-                    <label class="dragon" for="wholesale">Wholesale</label>
-                    <input type="number" class="size" id="wholesale" />
-                    <select name="unit" id="unit" placeholder="Unit">
-                      <option value="title">Unit</option>
-                      <option value="kilogram">kilogram</option>
-                      <option value="grams">grams</option>
-                      <option value="pieces">pieces</option>
-                    </select>
-                  </div>
-               
-                  <div class="drags">
-                    <label class="dragon" for="qty">Quantity</label>
-                    <input type="number" class="size" id="qty" />
-                    <select name="unit" id="unit" placeholder="Unit">
-                      <option value="title">Unit</option>
-                      <option value="kilogram">kilogram</option>
-                      <option value="grams">grams</option>
-                      <option value="pieces">pieces</option>
-                    </select>
-                  </div>
-                  <div class="drags">
-                    <label class="dragon" for="qty">Quantity</label>
-                    <input type="number" class="size" id="qty" />
+                    <label class="dragon" for="bar">Bar code</label>
+                    <input type="number" class="size" id="bar" />
                     <button type="button" id="scan"><i class="fa-solid fa-camera"></i></button>
                     </select>
                   </div>
                  
                   <div class="buttons">
-                    <input type="submit" name="Add product" id="add-product" />
-                    <input type="file" name="excelfile" id="add-file" accept=".xlsx" />
                     <input type="reset" name="cancel" id="reset" />
                     <button type="cancel" id="cancel"><a href="/html/inventory.html"></a>Cancel</button>
+                    <input type="submit" name="Add product" id="add-product" />
+                    <input type="file" name="excelfile" id="add-file" accept=".xlsx" />
                   </div>
                 </form>
             </div>

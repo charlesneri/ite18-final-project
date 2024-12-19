@@ -46,8 +46,8 @@ body {
 }
 div.product-section {
   padding-top: 2%;
- 
-  margin-left: 40%;
+
+  margin-left: 30%;
   background-color: #eee;
   border-radius: 3%;
   
@@ -58,7 +58,7 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   letter-spacing: 0.2rem;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 label.dragon {
@@ -76,9 +76,8 @@ label.dragon {
 }
 
 .buttons {
-  padding-top: 10%;
-  text-align: left;
-  display: inline;
+  padding-top: 2%;
+  display: flex;
 }
 
 #add-product,
@@ -86,10 +85,9 @@ label.dragon {
 #reset,
 #add-file {
   margin: 5%;
+justify-content: center;
 }
-.size {
-  width: 60%;
-}
+
 
 .logo img{
   width: 10%;
