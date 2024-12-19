@@ -35,14 +35,15 @@ body {
     text-indent: 2%;
     padding-right: 10%;
   }
-  .search-icon {
+
+   #search-btn{
     position: absolute;
-    left: 450px;
+    left: 490px;
     top: 90%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 18px;
     color: #717171;
-    pointer-events: none;
+    cursor: pointer;
   }
   /*editable*/
 
