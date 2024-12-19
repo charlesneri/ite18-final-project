@@ -14,7 +14,7 @@
         </div>
         <!--forms-->
            <div class="login-form">
-            <form action="" method="get">
+            <form action="" method="get" id="loginsite">
 
               <div class="pass">
                 <label for="name1" class="label" ></label>
@@ -67,7 +67,6 @@
         display: block;
         margin: 0;
       }
-
       form {
         display: inline-flex;
         flex-direction: column;
@@ -129,5 +128,34 @@
       }
     </style>
     <script>
+    // Simulated database of users
+const users = [
+    { username: 'casher1', password: 'password123', role: 'casher' },
+    { username: 'admin1', password: 'admin123', role: 'admin' },
+];
+
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const selectedRole = document.querySelector('input[name="role"]:checked').value;
+
+    // Check if the user exists and matches the role
+    const user = users.find(u => u.username === username && u.password === password && u.role === selectedRole);
+
+    if (user) {
+        // Redirect based on the role
+        if (selectedRole === 'casher') {
+            window.location.href = 'casher-site.html'; // Replace with your casher page URL
+        } else if (selectedRole === 'admin') {
+            window.location.href = 'inventory.html'; // Replace with your admin page URL
+        }
+    } else {
+        // Display an error message
+        document.getElementById('error').textContent = 'Invalid username, password, or role.';
+    }
+});
+
     </script>
   </html>
