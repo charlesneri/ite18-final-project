@@ -1,91 +1,96 @@
-*:hover{
-
-color: blue;
-}
 body {
   background-color: rgb(39, 39, 39);
-
+  margin: 0%;
+  padding: 0%;
 }
-.menu-container{
-  width: 20%;
-}
-nav {
-  padding-top: 5%;
-  padding-bottom: 200%;
-}
-#one-list {
-  margin-bottom: 60%;
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
 }
 
-li {
-  list-style-type: none;
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
 }
-.menus {
-  padding: 2%;
-  border: hidden;
-  background-color: whitesmoke;
+.vertical-menu a.active {
+  background-color: #04aa6d; /* Add a green color to the "active/current" link */
+  color: white;
 }
 
-.container .sidebar {
-  margin-left: 2%;
-  border-radius: 2%;
+.vertical-menu {
+  border-radius: 3%;
+  background-color: #eee;
+  height: 100%;
 }
+
 #search {
   border-radius: 2%;
   margin-top: 40%;
-  width: 20rem;
-  height: 3rem;
+  margin-left: 50%;
+  width:  20rem;
+  height: 2rem;
   border-radius: 3%;
   text-indent: 2%;
   padding-right: 10%;
 }
 .search-icon {
   position: absolute;
-  right: 10px; /* Adjust to align with your padding */
-  top: 70%;
+  left: 450px;
+  top: 90%;
   transform: translateY(-50%);
   font-size: 20px;
   color: #717171;
-  pointer-events: none; /* Prevent clicks on the icon */
+  pointer-events: none;
+}
+div.product-section {
+  padding-top: 2%;
+ 
+  margin-left: 40%;
+  background-color: #eee;
+  border-radius: 3%;
+  
 }
 h1 {
-  color: #ffff;
+  color: #434040;
   font-size: 1.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   letter-spacing: 0.2rem;
+  padding-bottom: 5%;
 }
 
-.container .product-section #form-prod {
-  float: left;
-  margin-left: 15%;
-  margin-top: 2%;
-}
-.container.product-section {
-  
-  margin-left: 20rem;
-  margin-top: 2%;
-}
-.dragon {
-  color: #fff;
+label.dragon {
+  color: #514f4f;
   display: flex;
   text-align: left;
   padding: 2%;
+  gap: 25%;
 }
+
 .drag {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
 }
+
 .buttons {
-  padding: 10%;
+  padding-top: 10%;
   text-align: left;
+  display: inline;
 }
+
 #add-product,
-#cancel {
+#cancel,
+#reset,
+#add-file {
   margin: 5%;
 }
 .size {
   width: 60%;
 }
-option {
-  text-align: center;
+
+.logo img{
+  width: 10%;
 }

@@ -12,10 +12,11 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="position-sticky mt-1 w-auto">
-          <div class="logo">
+    
+    <div class="container mains">
+      <header class="position-sticky">
+        <div class="position-sticky mt-1">
+          <div class="logo ms-5 ">
             <img id="logo" src="/logo123.png" alt="logo" width="100" />
           </div>
           <div
@@ -28,185 +29,149 @@
               name="search"
               id="search"
             />
-            <div class="option mt-3 justify-content-center  d-flex">
-              <div class="opt pe-4 ">
-              <button class="choice">
-                <i class="fa-solid fa-square-check"></i><span>Select</span>
-              </button>
-            </div>
-            <div class="opt ps-4">
-              <button class="choice">
-                <i class="fa-solid fa-pen-to-square"></i>Edit
-              </button>
-            </div>
-            </div>
           </div>
           
         </div>
       </header>
-      <div class="menu-container w-75 position-relative start-0">
-        <div class="col-md-3 text-bg-light">
-        <nav clas="sidenav">
-          <ul id="one-list">
-            <li>
-              <a href="home.html">
-                <button class="menus">
-                  <i class="fa-solid fa-house"></i>
-                  <span class="option"><b> Home</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><button class="menus">
-                  <i class="fa-solid fa-suitcase"></i>
-                  <span class="option"><b> Product</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><button class="menus">
-                  <i class="fa-solid fa-table-cells"></i
-                  ><span class="option"><b> Category</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><button class="menus">
-                  <i class="fa-solid fa-chart-line"></i
-                  ><span class="option"><b> Finance</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="#products"
-                ><button class="menus">
-                  <i class="fa-solid fa-plus"></i
-                  ><span class="option"><b> Add product</b></span>
-                </button></a
-              >
-            </li>
-          </ul>
+        <section>
+          
+              <div class=" vertical-menu container w-25 position-fixed start-0 ms-5">
+                <nav clas="sidenav">
+                    <a href="home.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="option  p-lg-2"><b> Home</b></span>
+                      </a
+                    >
+                    <a href="#"
+                      >
+                        <i class="fa-solid fa-suitcase"></i>
+                        <span class="option  p-lg-2"><b> Product</b></span>
+                    </a
+                    >
+                    <a href="#"
+                      >
+                        <i class="fa-solid fa-table-cells"></i
+                        ><span class="option  p-lg-2"><b> Category</b></span>
+                    </a
+                    >
+                    <a href="#"
+                      >
+                        <i class="fa-solid fa-chart-line"></i
+                        ><span class="option  p-lg-2"><b> Finance</b></span>
+                    </a
+                    >
+                    <a href="#products"
+                      >
+                        <i class="fa-solid fa-plus"></i
+                        ><span class="option  p-lg-2"><b> Add product</b></span>
+                    </a
+                    >
 
-          <ul>
-            <li>
-              <a href="#"
-                ><button class="menus">
-                  <i class="fa-solid fa-gear"></i
-                  ><span class="option"><b> Settings</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="/html/reg-form.html"
-                ><button class="menus">
-                  <i class="fa-solid fa-user"></i
-                  ><span class="option"><b> Create casher acoount</b></span>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="/html/log-in.html"
-                ><button class="menus">
-                  <i class="fa-solid fa-right-from-bracket"></i
-                  ><span class="option"><b>Log out</b></span>
-                </button></a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-      <section>
-        <div class="container product-section">
-         <div class="mother-dragon">
-            <h1>Add Products</h1>
-            
-            <div class="drag">
-              <form action="" method="get" id="form-prod">
-                <div class="drags">
-                  <label class="dragon" for="prod-name">Product Name </label>
-                  <input
-                    type="text"
-                    id="prod-name"
-                    placeholder="Product name"
-                  />
-                </div>
-                <div class="drags">
-                  <label class="dragon" for="category">Category</label>
-                  <input
-                    type="text"
-                    id="category"
-                    placeholder="Product category"
-                  />
-                </div>
-                
-                <div class="drags">
-                  <label class="dragon" for="cost-price">Cost Price</label>
-                  <input type="number" class="size" id="cost-price" />
-                  <select name="unit" id="unit" placeholder="Unit">
-                    <option value="title">Unit</option>
-                    <option value="kilogram">kilogram</option>
-                    <option value="grams">grams</option>
-                    <option value="pieces">pieces</option>
-                  </select>
-                </div>
-
+                    <a href="#"
+                      >
+                        <i class="fa-solid fa-gear"></i
+                        ><span class="option  p-lg-2"><b> Settings</b></span>
+                    </a
+                    >
+                    <a href="/html/reg-form.html"
+                      >
+                        <i class="fa-solid fa-user"></i
+                        ><span class="option  p-lg-2"><b> Create casher acoount</b></span>
+                    </a
+                    >
+                    <a href="/html/log-in.html"
+                      >
+                        <i class="fa-solid fa-right-from-bracket"></i
+                        ><span class="option p-lg-2"><b>Log out</b></span>
+                     </a
+                    >
+                </nav>
+                  </div>
+                  <!--done here-->
+           <main>
+            <div class="container product-section w-50 position-relative start-25 text-center">
+              <h1>Add Products</h1>
               
-                <div class="drags">
-                  <label class="dragon" for="selling-price"
-                    >Selling Price</label
-                  >
-                  <input type="number" class="size" id="selling-price" />
-                  <select name="unit" id="unit" placeholder="Unit">
-                    <option value="title">Unit</option>
-                    <option value="kilogram">kilogram</option>
-                    <option value="grams">grams</option>
-                    <option value="pieces">pieces</option>
-                  </select>
-                </div>
-                
-                <div class="drags">
-                  <label class="dragon" for="wholesale">Wholesale</label>
-                  <input type="number" class="size" id="wholesale" />
-                  <select name="unit" id="unit" placeholder="Unit">
-                    <option value="title">Unit</option>
-                    <option value="kilogram">kilogram</option>
-                    <option value="grams">grams</option>
-                    <option value="pieces">pieces</option>
-                  </select>
-                </div>
-             
-                <div class="drags">
-                  <label class="dragon" for="qty">Quantity</label>
-                  <input type="number" class="size" id="qty" />
-                  <select name="unit" id="unit" placeholder="Unit">
-                    <option value="title">Unit</option>
-                    <option value="kilogram">kilogram</option>
-                    <option value="grams">grams</option>
-                    <option value="pieces">pieces</option>
-                  </select>
-                </div>
-                <div class="drags">
-                  <label class="dragon" for="qty">Quantity</label>
-                  <input type="number" class="size" id="qty" />
-                  <button type="button" id="scan"><i class="fa-solid fa-camera"></i></button>
-                  </select>
-                </div>
+              <div class="drag">
+                  <div class="drags me-5">
+                    <form action="" method="get" id="form-prod"></form>
+                    <label class="dragon" for="prod-name">Product Name </label>
+                    <input
+                      type="text"
+                      id="prod-name"
+                      placeholder="Product name"
+                    />
+                  </div>
+                  <div class="drags ms-5">
+                    <label class="dragon " for="category">Category</label>
+                    <input
+                      type="text"
+                      id="category"
+                      placeholder="Product category"
+                    />
+                  </div>
+                  
+                  <div class="drags">
+                    <label class="dragon" for="cost-price">Cost Price</label>
+                    <input type="number" class="size" id="cost-price" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                  <div class="drags">
+                    <label class="dragon" for="selling-price"
+                      >Selling Price</label
+                    >
+                    <input type="number" class="size" id="selling-price" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                  
+                  <div class="drags">
+                    <label class="dragon" for="wholesale">Wholesale</label>
+                    <input type="number" class="size" id="wholesale" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
                
-                <div class="buttons">
-                  <input type="submit" name="Add product" id="add-product" />
-                  <input type="reset" name="cancel" id="cancel" />
-                </div>
-              </form>
+                  <div class="drags">
+                    <label class="dragon" for="qty">Quantity</label>
+                    <input type="number" class="size" id="qty" />
+                    <select name="unit" id="unit" placeholder="Unit">
+                      <option value="title">Unit</option>
+                      <option value="kilogram">kilogram</option>
+                      <option value="grams">grams</option>
+                      <option value="pieces">pieces</option>
+                    </select>
+                  </div>
+                  <div class="drags">
+                    <label class="dragon" for="qty">Quantity</label>
+                    <input type="number" class="size" id="qty" />
+                    <button type="button" id="scan"><i class="fa-solid fa-camera"></i></button>
+                    </select>
+                  </div>
+                 
+                  <div class="buttons">
+                    <input type="submit" name="Add product" id="add-product" />
+                    <input type="file" name="excelfile" id="add-file" accept=".xlsx" />
+                    <input type="reset" name="cancel" id="reset" />
+                    <button type="cancel" id="cancel"><a href="/html/inventory.html"></a>Cancel</button>
+                  </div>
+                </form>
             </div>
-            
-        </div>
-        </div>
-      </div>
-      </section>
+           </main>
+        </section>
     </div>
   </body>
 </html>
