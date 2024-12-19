@@ -29,7 +29,7 @@ body {
   border-radius: 2%;
   margin-top: 40%;
   margin-left: 50%;
-  width:  20rem;
+  width: 20rem;
   height: 2rem;
   border-radius: 3%;
   text-indent: 2%;
@@ -44,50 +44,37 @@ body {
   color: #717171;
   pointer-events: none;
 }
-div.product-section {
-  padding-top: 2%;
+.container-fluid.main {
+  padding: 0%;
+  margin: 0%;
+}
+.logo img {
+  margin-left: 13%;
+}
+.plus-prod {
+  margin-top: -3%;
+}
+th {
+  color: #ccc;
+  padding: 1%;
+  line-height: 15px;
+  font-size: 1rem;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+.subdiv {
   margin-left: 30%;
-  background-color: #eee;
-  border-radius: 3%;
-  
-}
-h1 {
-  color: #434040;
-  font-size: 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.2rem;
-  padding-bottom: 2%;
-}
-
-label.dragon {
-  color: #514f4f;
-  display: flex;
-  text-align: left;
-  padding: 2%;
-  gap: 25%;
-}
-
-.drag {
   display: flex;
   flex-wrap: wrap;
-  gap: 10%;
+  width: 70%;
+  padding: 1%;
 }
-
-.buttons {
-  padding-top: 2%;
-  display: flex;
-}
-
-#add-product,
-#cancel,
-#reset,
-#add-file {
-  margin: 5%;
-justify-content: center;
-}
-
-
-.logo img{
-  width: 10%;
+.h1-prod {
+  color: #eee;
+  text-align: center;
+  margin-left: 25%;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
 }
