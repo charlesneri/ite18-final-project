@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(39, 39, 39);
+    margin: 0%;
+    padding: 0%;
+  }
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+  }
+  .vertical-menu a.active {
+    background-color: #04aa6d; /* Add a green color to the "active/current" link */
+    color: white;
+  }
+  
+  .vertical-menu {
+    border-radius: 3%;
+    background-color: #eee;
+    height: 100%;
+  }
+  
+  #search {
+    border-radius: 2%;
+    margin-top: 40%;
+    margin-left: 50%;
+    width:  20rem;
+    height: 2rem;
+    border-radius: 3%;
+    text-indent: 2%;
+    padding-right: 10%;
+  }
+  .search-icon {
+    position: absolute;
+    left: 450px;
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #717171;
+    pointer-events: none;
+  }
+  div.product-section {
+    padding-top: 2%;
+   
+    margin-left: 40%;
+    background-color: #eee;
+    border-radius: 3%;
+    
+  }
+  h1 {
+    color: #434040;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    padding-bottom: 5%;
+  }
+  
+  label.dragon {
+    color: #514f4f;
+    display: flex;
+    text-align: left;
+    padding: 2%;
+    gap: 25%;
+  }
+  
+  .drag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+  }
+  
+  .buttons {
+    padding-top: 10%;
+    text-align: left;
+    display: inline;
+  }
+  
+  #add-product,
+  #cancel,
+  #reset,
+  #add-file {
+    margin: 5%;
+  }
+  .size {
+    width: 60%;
+  }
+  
+  .logo img{
+    width: 10%;
+  }
