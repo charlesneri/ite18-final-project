@@ -26,19 +26,11 @@
     width: 15%;
   }
 
-  .container,
-  .reg-forms {
-    text-align: center;
-  }
-  .reg-forms {
-    margin-top: 1%;
-  }
   .buttons input[type="submit"] {
-    margin-top: 2%;
+    margin-top: 5%;
     font-size: 1rem;
     padding: 0.5%;
     border-radius: 5%;
     width: 60%;
-    margin-bottom: 10%;
   }
  
