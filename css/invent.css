@@ -3,7 +3,6 @@ body {
   margin: 0%;
   padding: 0%;
   display: block;
-
 }
 .vertical-menu a {
   background-color: #eee; /* Grey background color */
@@ -34,7 +33,6 @@ main {
   flex: 1; /* Allows the main section to take up remaining space */
 }
 
-
 #search {
   border-radius: 2%;
   margin-top: 40%;
@@ -60,7 +58,7 @@ div.product-section {
   background-color: #eee;
   border-radius: 3%;
 }
-  
+
 h1 {
   color: #434040;
   font-size: 1.5rem;
@@ -68,7 +66,6 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.2rem;
   padding: 2%;
-  
 }
 .logo img {
   width: 10%;
@@ -78,8 +75,6 @@ h1 {
 label.dragon {
   color: #514f4f;
   display: inline-flex;
-  text-align: left;
- 
 }
 .drag {
   display: flex;
@@ -115,11 +110,11 @@ form {
   text-align: left; /* Center buttons and display content */
 }
 
-.butto{
+.butto {
   display: flex;
   padding: 2%;
   gap: 5%;
-margin-left: 20%;
+  margin-left: 20%;
 }
 /* Styling inputs and selects */
 input[type="text"],
@@ -162,8 +157,13 @@ button:hover {
   color: inherit;
 }
 
-#scan {
-  width: 25%;
+#scan,
+label.scan,
+#bar {
+  width: 50%;
+}
+.drags.mybar {
+  margin-left: 35%;
 }
 #result-display {
   font-size: 16px;
@@ -172,13 +172,47 @@ button:hover {
   text-align: left;
   text-indent: 5%;
   border: 1px solid black;
+  margin-left: -20%;
 }
 
-#calculate-btn,
 #result-display {
   width: 50%;
 }
 select {
   width: 40%;
   padding: 0%;
-} 
+}
+/*example*/
+#scanner-container {
+  width: 100%;
+  max-width: 500px; /* Limits the width for better responsiveness */
+  margin: 20px auto; /* Center the container */
+  text-align: center; /* Center the content */
+  background-color: #f4f4f4; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#barcode-video {
+  width: 100%; /* Makes the video responsive */
+  max-height: 300px; /* Limit video height */
+  border-radius: 8px; /* Rounded corners for video */
+}
+
+#bar {
+  margin-top: 15px; /* Space between video and input field */
+  padding: 10px; /* Padding for input field */
+  width: 100%; /* Makes input field take full width */
+  max-width: 400px; /* Limit max width */
+  font-size: 16px; /* Increase font size */
+  border: 2px solid #ccc; /* Light border */
+  border-radius: 8px; /* Rounded corners for input */
+  outline: none; /* Remove outline on focus */
+}
+
+#bar:focus {
+  border-color: #4caf50; /* Green border color on focus */
+}
+
+
