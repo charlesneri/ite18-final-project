@@ -2,6 +2,8 @@ body {
   background-color: rgb(39, 39, 39);
   margin: 0%;
   padding: 0%;
+  display: block;
+
 }
 .vertical-menu a {
   background-color: #eee; /* Grey background color */
@@ -10,26 +12,34 @@ body {
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
 }
-
-.vertical-menu a:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
+.container.mains {
+  margin-left: 0%;
+  padding-left: 0%;
 }
-.vertical-menu a.active {
-  background-color: #04aa6d; /* Add a green color to the "active/current" link */
-  color: white;
-}
-
 .vertical-menu {
   border-radius: 3%;
   background-color: #eee;
   height: 100%;
+  padding-bottom: 100%;
 }
+.main-layout {
+  display: flex; /* Aligns child elements (section and main) horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+section {
+  flex: 0 0 20%; /* Fixed width for the section containing vertical menu */
+}
+main {
+  flex: 1; /* Allows the main section to take up remaining space */
+}
+
 
 #search {
   border-radius: 2%;
   margin-top: 40%;
   margin-left: 50%;
-  width:  20rem;
+  width: 20rem;
   height: 2rem;
   border-radius: 3%;
   text-indent: 2%;
@@ -44,50 +54,131 @@ body {
   color: #717171;
   pointer-events: none;
 }
+
 div.product-section {
-  padding-top: 2%;
-  margin-left: 30%;
+  margin-left: 10%;
   background-color: #eee;
   border-radius: 3%;
-  
 }
+  
 h1 {
   color: #434040;
   font-size: 1.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   letter-spacing: 0.2rem;
-  padding-bottom: 2%;
+  padding: 2%;
+  
+}
+.logo img {
+  width: 10%;
+  margin-left: 10%;
 }
 
 label.dragon {
   color: #514f4f;
-  display: flex;
+  display: inline-flex;
   text-align: left;
-  padding: 2%;
-  gap: 25%;
+ 
 }
-
 .drag {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10%;
+  flex-direction: column;
+  width: 100%;
 }
 
+.drags,
+.drags1,
 .buttons {
-  padding-top: 2%;
   display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between fields */
 }
 
-#add-product,
-#cancel,
-#reset,
-#add-file {
-  margin: 5%;
-justify-content: center;
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between the columns */
+  justify-content: space-between;
 }
 
-
-.logo img{
-  width: 10%;
+.drags {
+  width: 30%; /* Each column takes up 45% of the form width */
+  display: flex;
+  align-items: justify;
+  gap: 10px;
 }
+
+.drags1,
+.butto {
+  width: 25%; /* Full-width for separation */
+  text-align: left; /* Center buttons and display content */
+}
+
+.butto{
+  display: flex;
+  padding: 2%;
+  gap: 5%;
+margin-left: 20%;
+}
+/* Styling inputs and selects */
+input[type="text"],
+input[type="number"],
+select {
+  width: 50%;
+  padding: 3px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #434040;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styles for button div */
+.butto input[type="reset"],
+.butto input[type="submit"],
+.butto button {
+  width: auto;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.butto a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#scan {
+  width: 25%;
+}
+#result-display {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  text-indent: 5%;
+  border: 1px solid black;
+}
+
+#calculate-btn,
+#result-display {
+  width: 50%;
+}
+select {
+  width: 40%;
+  padding: 0%;
+} 

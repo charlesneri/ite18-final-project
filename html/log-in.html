@@ -128,34 +128,39 @@
       }
     </style>
     <script>
-    // Simulated database of users
-const users = [
-    { username: 'casher1', password: 'password123', role: 'casher' },
-    { username: 'admin1', password: 'admin123', role: 'admin' },
-];
+document.getElementById('loginsite').addEventListener('submit', async function (event) {
+  event.preventDefault();
 
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission
+  const username = document.getElementById('name2').value.trim();
+  const password = document.getElementById('name1').value.trim();
+  const role = document.querySelector('input[name="user"]:checked').value;
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const selectedRole = document.querySelector('input[name="role"]:checked').value;
+  if (!username || !password) {
+    alert('Username and password cannot be empty.');
+    return;
+  }
 
-    // Check if the user exists and matches the role
-    const user = users.find(u => u.username === username && u.password === password && u.role === selectedRole);
+  try {
+    const response = await fetch('process-login.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password, role }),
+    });
 
-    if (user) {
-        // Redirect based on the role
-        if (selectedRole === 'casher') {
-            window.location.href = 'casher-site.html'; // Replace with your casher page URL
-        } else if (selectedRole === 'admin') {
-            window.location.href = 'inventory.html'; // Replace with your admin page URL
-        }
+    const result = await response.json();
+
+    if (result.success) {
+      window.location.href = result.redirect;
     } else {
-        // Display an error message
-        document.getElementById('error').textContent = 'Invalid username, password, or role.';
+      alert(result.message);
     }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
 });
 
-    </script>
+     </script>
   </html>

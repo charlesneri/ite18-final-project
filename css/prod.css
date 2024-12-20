@@ -71,10 +71,7 @@ table {
   width: 70%;
   padding: 1%;
 }
-.h1-prod {
-  color: #eee;
-  text-align: center;
-  margin-left: 25%;
-  font-weight: 700;
-  letter-spacing: 0.5rem;
+a.lahi {
+  text-decoration: none;
+  color: black;
 }
