@@ -5,11 +5,11 @@ body {
   display: block;
 }
 .vertical-menu a {
-  background-color: #eee; /* Grey background color */
-  color: black; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
 }
 .container.mains {
   margin-left: 0%;
@@ -22,15 +22,15 @@ body {
   padding-bottom: 100%;
 }
 .main-layout {
-  display: flex; /* Aligns child elements (section and main) horizontally */
-  height: 100vh; /* Full viewport height */
+  display: flex;
+  height: 100vh;
 }
 
 section {
-  flex: 0 0 20%; /* Fixed width for the section containing vertical menu */
+  flex: 0 0 20%;
 }
 main {
-  flex: 1; /* Allows the main section to take up remaining space */
+  flex: 1;
 }
 
 #search {
@@ -87,18 +87,18 @@ label.dragon {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between fields */
+  gap: 10px;
 }
 
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Space between the columns */
+  gap: 10px;
   justify-content: space-between;
 }
 
 .drags {
-  width: 30%; /* Each column takes up 45% of the form width */
+  width: 30%;
   display: flex;
   align-items: justify;
   gap: 10px;
@@ -106,8 +106,8 @@ form {
 
 .drags1,
 .butto {
-  width: 25%; /* Full-width for separation */
-  text-align: left; /* Center buttons and display content */
+  width: 25%;
+  text-align: left;
 }
 
 .butto {
@@ -182,37 +182,35 @@ select {
   width: 40%;
   padding: 0%;
 }
-/*example*/
+
 #scanner-container {
   width: 100%;
-  max-width: 500px; /* Limits the width for better responsiveness */
-  margin: 20px auto; /* Center the container */
-  text-align: center; /* Center the content */
-  background-color: #f4f4f4; /* Light background color */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Padding for spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 500px;
+  /margin: 20px auto;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #barcode-video {
-  width: 100%; /* Makes the video responsive */
-  max-height: 300px; /* Limit video height */
-  border-radius: 8px; /* Rounded corners for video */
+  width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
 }
 
 #bar {
-  margin-top: 15px; /* Space between video and input field */
-  padding: 10px; /* Padding for input field */
-  width: 100%; /* Makes input field take full width */
-  max-width: 400px; /* Limit max width */
-  font-size: 16px; /* Increase font size */
-  border: 2px solid #ccc; /* Light border */
-  border-radius: 8px; /* Rounded corners for input */
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   outline: none; /* Remove outline on focus */
 }
 
 #bar:focus {
-  border-color: #4caf50; /* Green border color on focus */
+  border-color: #4caf50;
 }
-
-
