@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin registration form</title>
   </head>
+  @extends('layout.login')
+  @section('content')
   <body>
+ 
     <div class="container">
       <div class="logo">
         <img src="/logo123.png" alt="logo" />
       </div>
+   
       <div class="reg-forms"></div>
       <form action="" method="post">
         <input type="text" id="fname" placeholder="First name" required />
-        <input type="text" id="lname" placeholder="last name" required />
-        <input type="email" id="email" placeholder="email" required />
+        <input type="text" id="lname" placeholder="Last name" required />
+        <input type="email" id="email" placeholder="Email" required />
         <input type="password" id="name1" placeholder="Password" required />
         <input
           type="password"
@@ -38,6 +42,7 @@
       </form>
     </div>
   </body>
+  @endsection
   <style>
     * {
       font-family: Arial, Helvetica, sans-serif;

@@ -10,16 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <style>
-      /* Style for the form (hidden initially) */
-      .add-product-form {
-        display: none;
-        margin-top: 20px;
-        padding: 20px;
-        border: 1px solid #ddd;
-        background-color: #f9f9f9;
-      }
-    </style>
+    
   </head>
   <body>
     <div class="container-fluid main">
@@ -120,6 +111,7 @@
 
         <!-- Add Product Form (Hidden initially) -->
         <div class="add-product-form" id="addProductForm">
+          <button class="exit-button float-end" onclick="closeForm()">X</button>
             <h1>Add Products</h1>
             <div class="drag">
               <form action="" method="post" id="add-item">

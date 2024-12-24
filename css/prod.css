@@ -54,7 +54,6 @@ body {
 }
 .plus-prod {
   margin-top: -6%;
-
 }
 th {
   color: #ccc;
@@ -247,4 +246,12 @@ select {
 
 #bar:focus {
   border-color: #4caf50; /* Green border color on focus */
+}
+/* Style for the form (hidden initially) */
+.add-product-form {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
 }
