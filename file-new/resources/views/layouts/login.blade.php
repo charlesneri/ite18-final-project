@@ -10,7 +10,7 @@
       <div class="container">
       
         <div class="logo">
-        <img src="{{ asset('resources/logo123.png') }}" alt="logo">
+          <img src="/logo123.png" alt="logo">
         </div>
         <!--forms-->
            <div class="login-form">
@@ -44,12 +44,11 @@
                 >
               </div>
               <div class="buttons">
-                <input type="submit" class="border-primary-subtle" value="Log-in" />
-              <a href="file-new\resources\views\layouts\register-form.blade.php">  <input
+                <button type="submit" class="border-primary-subtle" >Log-in</button>
+              <a href="{{ route('register') }}">  <button
                   type="button"
                   class="border-primary-subtle"
-                  value="Create Admin Account"
-                /></a>
+                > Create Admin Account</button></a>
               </div>
             </form>
            </div>
@@ -60,7 +59,7 @@
     <style>
       * {
         font-family: Arial, Helvetica, sans-serif;
-        color: white;
+     color: #fff;
       }
       body {
         background-color: #272727;
@@ -95,8 +94,8 @@
         text-align: center;
       }
    
-      .buttons input[type="submit"],
-      .buttons input[type="button"] {
+      .buttons button[type="submit"],
+      .buttons button[type="button"] {
         margin-top: 5%;
         font-size: 1rem;
         border-radius: 5%;
@@ -105,9 +104,11 @@
       }
 
 
-      .buttons input[type="submit"]:hover,
-      .buttons input[type="button"]:hover {
-        color: rgb(97, 97, 245);
+      .buttons button[type="submit"]:hover,
+      .buttons button[type="button"]:hover {
+        background-color: rgb(105, 199, 243);
+      cursor: pointer;
+      transition: 0.5s;
       }
 
       .radio input[type="radio"] {

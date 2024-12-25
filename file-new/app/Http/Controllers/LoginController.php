@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function getFilePath()
+    public function showLoginForm()
     {
-        $filePath = resource_path('views/logins.blade.php');
-        return $filePath;
+        return view('layouts.login');
     }
     
+    /*
     // Process login form submission
     public function processLogin(Request $request)
     {
@@ -33,10 +33,6 @@ class LoginController extends Controller
         ]);
     }
 
-    // Show the registration form (if applicable)
-    public function showRegisterForm()
-    {
-        return view('register-form');  // This would be for the register view (if created)
-    }
+   */
 }
 

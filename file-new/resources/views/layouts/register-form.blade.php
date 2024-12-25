@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin registration form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
-  @extends('layout.login')
-  @section('content')
   <body>
- 
     <div class="container">
+      <button type="button" class="back"><a href="{{ route('home') }}">Back</a></button>
+
       <div class="logo">
         <img src="/logo123.png" alt="logo" />
       </div>
-   
       <div class="reg-forms"></div>
       <form action="" method="post">
         <input type="text" id="fname" placeholder="First name" required />
@@ -28,27 +30,45 @@
         />
 
         <div class="buttons">
-          <input
-            type="submit"
-            class="border-primary-subtle"
-            value="Create Admin Account"
-          />
-          <input
-            type="submit"
-            class="border-primary-subtle"
-            value="Create Casher Account"
-          />
+          <button type="submit" class="border-primary-subtle">
+            Create Admin Account
+          </button>
+          <button type="submit" class="border-primary-subtle">
+            Create Casher Account
+          </button>
         </div>
       </form>
     </div>
   </body>
-  @endsection
   <style>
     * {
       font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
     }
     body {
       background-color: rgb(39, 39, 39);
+    }
+    .back {
+      float: left;
+      margin-left: 3%;
+      margin-top: 2%;
+      width: auto;
+      font-size: 1em;
+      background-color: #fff;
+      border: 1px solid #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .back a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      background-color: rgb(105, 199, 243);
+      cursor: pointer;
+      transition: 0.5s;
     }
 
     form {
@@ -66,6 +86,7 @@
     .logo {
       text-align: center;
       margin-top: 1%;
+      margin-right: 8%;
     }
 
     .logo img {
@@ -79,15 +100,21 @@
     .reg-forms {
       margin-top: 1%;
     }
-    .buttons input[type="submit"] {
-      margin-top: 2%;
-      font-size: 1rem;
-      padding: 0.5%;
-      border-radius: 5%;
-      width: 60%;
+    button[type="submit"] {
+      display: flex;
+      margin: 10px 0px auto;
+      width: 50%;
+      height: 30px;
+      padding-top: 5px;
+      padding-left: 12px;
     }
-    .buttons input[type="submit"]:hover {
-      color: rgb(97, 97, 245);
+    .buttons {
+      justify-items: center;
+    }
+    button[type="submit"]:hover {
+      background-color: rgb(105, 199, 243);
+      cursor: pointer;
+      transition: 0.5s;
     }
   </style>
 </html>
