@@ -1,228 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cashier Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('cssfile/casher.css') }}" />
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cashier Site</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ asset('cssfile/casher.css') }}" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="container-fluid">
-          <div class="group-center">
-            <img src="{{ asset('images/logo.png') }}?v={{ time() }}" class="logo" alt="logo" />
-            <h1 class="pos">POS SYSTEM</h1>
-            <br />
-            <span class="casher">Casher Name:</span>
-            <span class="namedrop">Casher_name-display</span
-            ><!--dri mugawas ang name sacasher once makalogin-->
-          </div>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      />
+    </head>
+    <body>
+      <header>
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="group-center">
+              <img src="{{ asset('images/logo.png') }}?v={{ time() }}" class="logo" alt="logo" />
+              <h1 class="pos">POS SYSTEM</h1>
+              <br />
+              <span class="casher">Casher Name:</span>
+              <span class="namedrop">Casher_name-display</span
+              ><!--dri mugawas ang name sacasher once makalogin-->
+            </div>
 
-          <div class="dropdown">
-            <button type="menu" class="dropbtn float-end" onclick="justclick()">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#" id="addProductBtn">Add product</a>
-              <a href="/html/log-in.html">Log-out</a>
+            <div class="dropdown">
+              <button type="menu" class="dropbtn float-end" onclick="justclick()">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#addProductForm" id="addProductBtn">Add product</a>
+                <a href="{{ route('home') }}">Log-out</a>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div class="container-fluid holder">
-          <div class="item col-1">
-            <label for="search" role="search" id="search"></label>
-            <input type="search" name="" id="search" />
-            <button type="button" id="search-btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button type="button" id="zooom">
-              <i class="fa-solid fa-maximize"></i>
-            </button>
-          </div>
-          <div class="item col-2">
-            <table class="tables">
-              <thead>
-                <tr class="prods-head">
-                  <th class="prod">Item</th>
-                  <th class="prod">Stock before purchase</th>
-                  <th class="prod">stock after purchace</th>
-                  <th class="prod">QTY</th>
-                  <th class="prod">Price</th>
-                  <th class="prod">Total</th>
-                </tr>
-              </thead>  
-            </table>
-          </div>
-          <div class="item row-cols-1"></div>
-          <div class="item row-cols-2">
-            
-             
-              <div id="paybtns">
-                <form action="" method="get"></form>
-                <div class="total">Total: <span id="total">0</span></div>
-                <div class="buttons-pay">
-                  <label for="code-entry" name="code-entry"></label>
-                  <input type="text" id="code-entry" placeholder="Enter barcode">
+        </nav>
+      </header>
+      <main>
+        <section>
+          <div class="container-fluid holder">
+            <div class="item col-1">
+              <label for="search" role="search" id="search"></label>
+              <input type="search" name="" id="search" />
+              <button type="button" id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button type="button" id="zooom">
+                <i class="fa-solid fa-maximize"></i>
+              </button>
+            </div>
+            <div class="item col-2">
+              <table class="tables">
+                <thead>
+                  <tr class="prods-head">
+                    <th class="prod">Item</th>
+                    <th class="prod">Stock before purchase</th>
+                    <th class="prod">stock after purchace</th>
+                    <th class="prod">QTY</th>
+                    <th class="prod">Price</th>
+                    <th class="prod">Total</th>
+                  </tr>
+                </thead>  
+              </table>
+            </div>
+            <div class="item row-cols-1"></div>
+            <div class="item row-cols-2">
               
-                  <div class="pay-cancel">
-                    <button class="cancel" id="cancelButton">Cancel</button>
-                    <button class="pay" id="payButton">Pay</button>
+              
+                <div id="paybtns">
+                  <form action="" method="get"></form>
+                  <div class="total">Total: <span id="total">0</span></div>
+                  <div class="buttons-pay">
+                    <label for="code-entry" name="code-entry"></label>
+                    <input type="text" id="code-entry" placeholder="Enter barcode">
+                
+                    <div class="pay-cancel">
+                      <button class="cancel" id="cancelButton">Cancel</button>
+                      <button class="pay" id="payButton">Pay</button>
+                    </div>
                   </div>
                 </div>
+                
               </div>
-              
             </div>
-          </div>
 
-         
-        <!-- Add Product Form (Hidden initially) -->
-        <div class="add-product-form" id="addProductForm">
-          <button class="exit-button" onclick="closeForm()">X</button>
-          <h1>Add Products</h1>
-          <div class="drag">
-            <form action="" method="post" id="add-item">
-              <!-- Serial No., Product Name, and Category -->
-              <div class="drags">
-                <label class="dragon" for="serial-no">Serial No.</label>
-                <input type="text" id="serial-no" placeholder="Serial No." />
-                <label class="dragon" for="prod-name">Product Name</label>
-                <input
-                  type="text"
-                  id="prod-name"
-                  placeholder="Product Name"
-                />
-                <label class="dragon" for="category">Category</label>
-                <input
-                  type="text"
-                  id="category"
-                  placeholder="Enter Category"
-                />
-              </div>
+          
+          <!-- Add Product Form (Hidden initially) -->
+          <div class="add-product-form" id="addProductForm">
+            <button class="exit-button" onclick="closeForm()">X</button>
+            <h1>Add Products</h1>
+            <div class="drag">
+              <form action="" method="post" id="add-item">
+                <!-- Serial No., Product Name, and Category -->
+                <div class="drags">
+                  <label class="dragon" for="serial-no">Serial No.</label>
+                  <input type="text" id="serial-no" placeholder="Serial No." />
+                  <label class="dragon" for="prod-name">Product Name</label>
+                  <input
+                    type="text"
+                    id="prod-name"
+                    placeholder="Product Name"
+                  />
+                  <label class="dragon" for="category">Category</label>
+                  <input
+                    type="text"
+                    id="category"
+                    placeholder="Enter Category"
+                  />
+                </div>
 
-              <!-- Quantity and Unit -->
-              <div class="drags">
-                <label class="dragon" for="qty">Quantity</label>
-                <input
-                  type="number"
-                  id="qty"
-                  class="size"
-                  placeholder="Quantity"
-                />
-                <select name="unit" id="unit">
-                  <option value="title" disabled selected>Unit</option>
-                  <option value="kilogram">Kilogram</option>
-                  <option value="grams">Grams</option>
-                  <option value="pieces">Pieces</option>
-                </select>
-              </div>
+                <!-- Quantity and Unit -->
+                <div class="drags">
+                  <label class="dragon" for="qty">Quantity</label>
+                  <input
+                    type="number"
+                    id="qty"
+                    class="size"
+                    placeholder="Quantity"
+                  />
+                  <select name="unit" id="unit">
+                    <option value="title" disabled selected>Unit</option>
+                    <option value="kilogram">Kilogram</option>
+                    <option value="grams">Grams</option>
+                    <option value="pieces">Pieces</option>
+                  </select>
+                </div>
 
-              <!-- Cost Price -->
-              <div class="drags">
-                <label class="dragon" for="cost-price"
-                  >Cost Price/Upon Purchase</label
-                >
-                <input
-                  t
-                  type="number"
-                  id="cost-price"
-                  class="size"
-                  placeholder="Enter Cost Price"
-                />
-              </div>
+                <!-- Cost Price -->
+                <div class="drags">
+                  <label class="dragon" for="cost-price"
+                    >Cost Price/Upon Purchase</label
+                  >
+                  <input
+                    t
+                    type="number"
+                    id="cost-price"
+                    class="size"
+                    placeholder="Enter Cost Price"
+                  />
+                </div>
 
-              <!-- Peso Added -->
-              <div class="drags">
-                <label class="dragon" for="peso-add">%/Peso Added</label>
-                <input
-                  type="number"
-                  id="peso-add"
-                  class="size"
-                  placeholder="Enter % or Peso Added"
-                />
-                <select name="unit-peso" id="unit-peso">
-                  <option value="" disabled selected>Unit</option>
-                  <option value="Peso">Peso</option>
-                  <option value="percent">Percent</option>
-                </select>
-              </div>
+                <!-- Peso Added -->
+                <div class="drags">
+                  <label class="dragon" for="peso-add">%/Peso Added</label>
+                  <input
+                    type="number"
+                    id="peso-add"
+                    class="size"
+                    placeholder="Enter % or Peso Added"
+                  />
+                  <select name="unit-peso" id="unit-peso">
+                    <option value="" disabled selected>Unit</option>
+                    <option value="Peso">Peso</option>
+                    <option value="percent">Percent</option>
+                  </select>
+                </div>
 
-              <!-- Selling Price -->
-              <div class="drags">
-                <label class="dragon" for="selling-price"
-                  >Selling Price</label
-                >
-                <input
-                  type="number"
-                  id="selling-price"
-                  class="size"
-                  placeholder="Enter Selling Price"
-                />
-                <select name="unit-sell" id="unit-sell">
-                  <option value="title" disabled selected>Unit</option>
-                  <option value="kilogram">Kilogram</option>
-                  <option value="grams">Grams</option>
-                  <option value="pieces">Pieces</option>
-                </select>
-              </div>
+                <!-- Selling Price -->
+                <div class="drags">
+                  <label class="dragon" for="selling-price"
+                    >Selling Price</label
+                  >
+                  <input
+                    type="number"
+                    id="selling-price"
+                    class="size"
+                    placeholder="Enter Selling Price"
+                  />
+                  <select name="unit-sell" id="unit-sell">
+                    <option value="title" disabled selected>Unit</option>
+                    <option value="kilogram">Kilogram</option>
+                    <option value="grams">Grams</option>
+                    <option value="pieces">Pieces</option>
+                  </select>
+                </div>
 
-              <!-- Wholesale -->
-              <div class="drags">
-                <label class="dragon" for="wholesale"
-                  >%/Peso Added Wholesale</label
-                >
-                <input
-                  type="number"
-                  id="wholesale"
-                  class="size"
-                  placeholder="Enter Wholesale % or Peso Added"
-                />
-                <select name="unit-wholesale" id="unit-wholesale">
-                  <option value="" disabled selected>Unit</option>
-                  <option value="Peso">Peso</option>
-                  <option value="percent">Percent</option>
-                </select>
-              </div>
+                <!-- Wholesale -->
+                <div class="drags">
+                  <label class="dragon" for="wholesale"
+                    >%/Peso Added Wholesale</label
+                  >
+                  <input
+                    type="number"
+                    id="wholesale"
+                    class="size"
+                    placeholder="Enter Wholesale % or Peso Added"
+                  />
+                  <select name="unit-wholesale" id="unit-wholesale">
+                    <option value="" disabled selected>Unit</option>
+                    <option value="Peso">Peso</option>
+                    <option value="percent">Percent</option>
+                  </select>
+                </div>
 
-              <!-- Barcode -->
-              <div class="drags mybar">
-                <label class="dragon" for="bar" class="scan">Bar Code</label>
-                <input
-                  type="number"
-                  id="bar"
-                  class="size"
-                  placeholder="Enter Bar Code"
-                />
-               
-                <button type="button" id="scan">
-                  <i class="fa-solid fa-camera"></i> Scan
-                </button>
-              </div>
+                <!-- Barcode -->
+                <div class="drags mybar">
+                  <label class="dragon" for="bar" class="scan">Bar Code</label>
+                  <input
+                    type="number"
+                    id="bar"
+                    class="size"
+                    placeholder="Enter Bar Code"
+                  />
+                
+                  <button type="button" id="scan">
+                    <i class="fa-solid fa-camera"></i> Scan
+                  </button>
+                </div>
 
-              <!-- Total Display and Calculate Button -->
-              <div class="drags1">
-                <div id="result-display"><span>Total: </span></div>
-              </div>
- </div>
-          <button type="submit" class="btn btn-primary float-end">Submit</button>
-        </form>
-      </div>
-
-
-
+                <!-- Total Display and Calculate Button -->
+                <div class="drags1">
+                  <div id="result-display"><span>Total: </span></div>
+                </div>
+  </div>
+            <button type="submit" class="btn btn-primary float-end">Submit</button>
+          </form>
         </div>
-      </section>
-    </main>
-    <script src="/js/casher-prod.js"></script>
-  </body>
-</html>
+
+
+
+          </div>
+        </section>
+      </main>
+      <script src="{{ asset('javascript/cash.js') }}?v={{ time() }}" defer></script>
+    </body>
+  </html>

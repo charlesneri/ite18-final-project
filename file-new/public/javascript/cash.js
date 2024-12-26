@@ -40,7 +40,7 @@ function closeForm() {
   document.getElementById("overlay").classList.remove("active");
 }
 
-/* Updated calculateTotal function */
+// Function to calculate the total based on form inputs
 function calculateTotal() {
   // Get the values from input fields
   const qty = parseFloat(document.getElementById("qty").value) || 0;
@@ -90,3 +90,10 @@ document
 
 // Ensure the initial calculation runs on page load
 document.addEventListener("DOMContentLoaded", calculateTotal);
+
+// Event listener for form submission (if needed to prevent default form action)
+document.getElementById("add-item").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // You can handle the form submission here or send the form data via AJAX
+  console.log("Form submitted");
+});

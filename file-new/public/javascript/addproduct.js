@@ -1,38 +1,4 @@
-/*// Barcode scanning setup with QuaggaJS
-    function startBarcodeScanner() {
-        Quagga.init(
-          {
-            inputStream: {
-              name: "Live",
-              type: "LiveStream",
-              target: document.querySelector("#barcode-video"),
-              constraints: {
-                facingMode: "environment", // Use rear camera
-              },
-            },
-            decoder: {
-              readers: ["code_128_reader", "ean_reader", "ean_8_reader", "upc_reader"],
-            },
-          },
-          function (err) {
-            if (err) {
-              console.error(err);
-              return;
-            }
-            Quagga.start();
-          }
-        );
 
-        Quagga.onDetected(function (data) {
-          const barcode = data.codeResult.code;
-          document.getElementById("bar").value = barcode; // Populate barcode input
-          console.log("Scanned Barcode: " + barcode);
-        });
-      }
-
-// Call the function to start scanning when the page loads
-window.onload = startBarcodeScanner;
-*/
 // Calculation logic
 function calculateTotal() {
   // Get the values from input fields

@@ -6,8 +6,6 @@
     <title>Inventory site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('cssfile/invent.css') }}" />
-    <script src="{{ asset('js-file/invent.js') }}"></script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -236,5 +234,8 @@
         </main>
       </div>
     </div>
+   
+    <script src="{{ asset('javascript/addproduct.js') }}?v={{ time() }}"></script>
+  
     </body>
 </html>

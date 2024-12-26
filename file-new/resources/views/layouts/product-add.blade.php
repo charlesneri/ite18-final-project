@@ -243,6 +243,6 @@
       </main>
     </div>
 
-    <script src="{{ asset('cssfile/prod.css') }}"></script>
+    <script src="{{ asset('javascript/productlist.js') }}?v={{ time() }}" defer></script>
   </body>
 </html>
