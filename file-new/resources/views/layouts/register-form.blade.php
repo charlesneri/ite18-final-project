@@ -14,7 +14,7 @@
       <button type="button" class="back"><a href="{{ route('home') }}">Back</a></button>
 
       <div class="logo">
-        <img src="/logo123.png" alt="logo" />
+        <img src="{{ asset('images/logo.png') }}?v={{ time() }}" alt="logo" />
       </div>
       <div class="reg-forms"></div>
       <form action="" method="post">

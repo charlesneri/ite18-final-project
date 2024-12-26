@@ -10,19 +10,20 @@
       <div class="container">
       
         <div class="logo">
-          <img src="/logo123.png" alt="logo">
+          <img src="{{ asset('images/logo.png') }}?v={{ time() }}" alt="logo" id="logos" >
         </div>
         <!--forms-->
            <div class="login-form">
-            <form action="" method="get" id="loginsite">
-
+            <form action="{{ route('login.process') }}" method="post" id="loginsite">
+        @csrf   <!--SRF (Cross-Site Request Forgery) token is a security mechanism
+         used to protect web applications from unauthorized or malicious actions-->
               <div class="pass">
                 <label for="name1" class="label" ></label>
                 <p class="user">Username</p>
-                <input type="text" id="name2" placeholder="Enter username" required />
+                <input type="text" id="name2" name="username" placeholder="Enter username" required />
                 <label for="name2" class="label" ></label>
                 <p class="user">Password</p>
-                <input type="password" id="name1" placeholder=" Enter Password" required />
+                <input type="password" id="name1" name="password" placeholder=" Enter Password" required />
               </div>
               <div class="radio">
                 <label
@@ -32,6 +33,7 @@
                     name="user"
                     value="admin"
                     checked
+                     name="role"
                   />Admin</label
                 >
                 <label
@@ -40,6 +42,7 @@
                     type="radio"
                     name="user"
                     value="casher"
+                      name="role"
                   />Cashier</label
                 >
               </div>
@@ -129,6 +132,7 @@
       }
     </style>
     <script>
+      /*
 document.getElementById('loginsite').addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -162,6 +166,6 @@ document.getElementById('loginsite').addEventListener('submit', async function (
     alert('An error occurred. Please try again.');
   }
 });
-
+*/
      </script>
   </html>
