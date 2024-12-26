@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cashier Site</title>
-    <link rel="stylesheet" href="/botsrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/casher.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('cssfile/casher.css') }}" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,7 +17,7 @@
       <nav class="navbar">
         <div class="container-fluid">
           <div class="group-center">
-            <img src="/logo123.png" class="logo" alt="logo" />
+            <img src="{{ asset('images/logo.png') }}?v={{ time() }}" class="logo" alt="logo" />
             <h1 class="pos">POS SYSTEM</h1>
             <br />
             <span class="casher">Casher Name:</span>

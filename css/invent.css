@@ -20,7 +20,9 @@ body {
   background-color: #eee;
   height: 100%;
   padding-bottom: 100%;
+ 
 }
+
 .main-layout {
   display: flex;
   height: 100vh;

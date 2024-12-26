@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory site</title>
-    <link rel="stylesheet" href="/botsrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/invent.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('cssfile/invent.css') }}" />
+    <script src="{{ asset('js-file/invent.js') }}"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,7 +18,7 @@
       <header class="position-sticky">
         <div class="position-sticky">
           <div class="logo">
-            <img id="logo" src="/logo123.png" alt="logo" width="100" />
+            <img id="logo" src="{{ asset('images/logo.png') }}?v={{ time() }}" alt="logo" width="100" />
           </div>
           <div
             class="search-bar position-absolute top-0 start-50 translate-middle"
@@ -39,11 +41,11 @@
             class="vertical-menu container w-575 position-relative start-0 end-100 ms-5"
           >
             <nav class="sidenav">
-              <a href="home.html" target="_self">
+              <a href="{{ route('homepage') }}" target="_self">
                 <i class="fa-solid fa-house"></i>
                 <span class="option p-lg-2"><b>Home</b></span>
               </a>
-              <a href="/html/product.html" target="_self">
+              <a href="#" target="_self">
                 <i class="fa-solid fa-suitcase"></i>
                 <span class="option p-lg-2"><b>Product</b></span>
               </a>
@@ -55,7 +57,7 @@
                 <i class="fa-solid fa-chart-line"></i>
                 <span class="option p-lg-2"><b>Finance</b></span>
               </a>
-              <a href="html/inventory.html" target="_self">
+              <a href="#" target="_self">
                 <i class="fa-solid fa-plus"></i>
                 <span class="option p-lg-2"><b>Add Product</b></span>
               </a>
@@ -234,6 +236,5 @@
         </main>
       </div>
     </div>
-    <script src="/js/invent..js"></script>
-  </body>
+    </body>
 </html>

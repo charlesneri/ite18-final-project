@@ -30,17 +30,15 @@
                   ><input
                     id="admin"
                     type="radio"
-                    name="user"
                     value="admin"
-                    checked
                      name="role"
+                     checked
                   />Admin</label
                 >
                 <label
                   ><input
                     id="casher"
                     type="radio"
-                    name="user"
                     value="casher"
                       name="role"
                   />Cashier</label
