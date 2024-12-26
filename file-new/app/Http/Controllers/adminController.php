@@ -14,20 +14,3 @@ class adminController extends Controller
 
     
 }
-
-class HomeController extends Controller{
-
-    public function homepage()
-    {
-        return view('layouts.home'); // Assuming 'login' corresponds to 'login.blade.php'
-    }
-}
-/*
-class ProductListController extends Controller{
-
-    public function prodlists()
-    {
-        return view('layouts.product-add'); 
-    }
-}
-    */

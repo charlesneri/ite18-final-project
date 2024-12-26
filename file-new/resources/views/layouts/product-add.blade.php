@@ -17,7 +17,7 @@
       <header class="position-sticky">
         <div class="position-sticky">
           <div class="logo">
-            <img id="logo" src="/logo123.png" alt="logo" width="100" />
+            <img id="logo" src="{{ asset('images/logo.png') }}?v={{ time() }}" alt="logo" width="100" />
           </div>
           <div
             class="search-bar position-absolute top-0 start-50 translate-middle"
@@ -52,11 +52,11 @@
         <section>
           <div class="vertical-menu container w-25 position-fixed start-0 ms-5 z-i">
             <nav class="sidenav">
-              <a href="home.html" target="_self">
+              <a href="{{ route('homepage') }}" target="_self">
                 <i class="fa-solid fa-house"></i>
                 <span class="option p-lg-2"><b> Home</b></span>
               </a>
-              <a href="/html/product.html" target="_self">
+              <a href="{{ route('prodlist') }}" target="_self">
                 <i class="fa-solid fa-suitcase"></i>
                 <span class="option p-lg-2"><b> Product</b></span>
               </a>
@@ -68,7 +68,7 @@
                 <i class="fa-solid fa-chart-line"></i
                 ><span class="option p-lg-2"><b> Finance</b></span>
               </a>
-              <a href="/html/inventory.html" target="_self">
+              <a href="{{ route('inventory') }}" target="_self">
                 <i class="fa-solid fa-plus"></i
                 ><span class="option p-lg-2"><b> Add product</b></span>
               </a>
@@ -76,13 +76,13 @@
                 <i class="fa-solid fa-gear"></i
                 ><span class="option p-lg-2"><b> Settings</b></span>
               </a>
-              <a href="/html/reg-form.html" target="_self">
+              <a href="{{ route('register') }}" target="_self">
                 <i class="fa-solid fa-user"></i
                 ><span class="option p-lg-2"
                   ><b> Create casher account</b></span
                 >
               </a>
-              <a href="/html/log-in.html" target="_self">
+              <a href="{{ route('home') }}" target="_self">
                 <i class="fa-solid fa-right-from-bracket"></i
                 ><span class="option p-lg-2"><b>Log out</b></span>
               </a>

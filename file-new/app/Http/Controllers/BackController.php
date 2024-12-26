@@ -10,4 +10,6 @@ class BackController extends Controller
     {
         return view('layouts.login'); // Assuming 'login' corresponds to 'login.blade.php'
     }
+
+    
 }

@@ -12,15 +12,13 @@ body {
     text-decoration: none; /* Remove underline from links */
 }
 .vertical-menu a:hover {
-    background-color: #8a8a8a;
+    background-color: #ccc;
 }
 .container.mains {
     margin-left: 0%;
     padding-left: 0%;
 }
-.sidenav a:hover {
-    background-color: #434040;
-}
+
 .vertical-menu {
     border-radius: 3%;
     background-color: #eee;

@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\BackController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\CasherController;
 use App\Http\Controllers\HomeController;
-//use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\ProductListController;
 //use App\Http\Controllers\AddProductController;
 
 
@@ -34,6 +34,4 @@ Route::get('/casher', [CasherController::class, 'casher'])->name('casher');
 //Home route
 Route::get('/homepage', [HomeController::class, 'home'])->name('homepage');
 //product list route
-//Route::get('/prodlist', [ProductListController::class, 'prodlists'])->name('prodlist');
-//add prodct route
-//Route::get('/add', [AddProductController::class, 'addprod'])->name('add');
+Route::get('/prodlist', [ProductListController::class, 'proddisplay'])->name('prodlist');

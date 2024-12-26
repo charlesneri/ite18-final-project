@@ -40,12 +40,12 @@
           
               <div class=" vertical-menu container w-25 position-fixed start-0 ms-5">
                 <nav clas="sidenav">
-                    <a href="home.html" target="_self">
+                    <a href="{{ route('homepage') }}" target="_self">
                         <i class="fa-solid fa-house"></i>
                         <span class="option  p-lg-2"><b> Home</b></span>
                       </a
                     >
-                    <a href="/html/product.html"
+                    <a href="{{ route('prodlist') }}"
                     target="_self"  >
                         <i class="fa-solid fa-suitcase"></i>
                         <span class="option  p-lg-2"><b> Product</b></span>
@@ -63,7 +63,7 @@
                         ><span class="option  p-lg-2"><b> Finance</b></span>
                     </a
                     >
-                    <a href="inventory.html"
+                    <a href="{{ route('inventory') }}"
                     target="_self"  >
                         <i class="fa-solid fa-plus"></i
                         ><span class="option  p-lg-2"><b> Add product</b></span>
@@ -76,13 +76,13 @@
                         ><span class="option  p-lg-2"><b> Settings</b></span>
                     </a
                     >
-                    <a href="/html/reg-form.html"
+                    <a href="{{ route('register') }}"
                     target="_self" >
                         <i class="fa-solid fa-user"></i
                         ><span class="option  p-lg-2"><b> Create casher acoount</b></span>
                     </a
                     >
-                    <a href="/html/log-in.html"
+                    <a href="{{ route('home') }}"
                     target="_self" >
                         <i class="fa-solid fa-right-from-bracket"></i
                         ><span class="option p-lg-2"><b>Log out</b></span>

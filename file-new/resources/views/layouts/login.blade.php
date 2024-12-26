@@ -130,40 +130,7 @@
       }
     </style>
     <script>
-      /*
-document.getElementById('loginsite').addEventListener('submit', async function (event) {
-  event.preventDefault();
 
-  const username = document.getElementById('name2').value.trim();
-  const password = document.getElementById('name1').value.trim();
-  const role = document.querySelector('input[name="user"]:checked').value;
 
-  if (!username || !password) {
-    alert('Username and password cannot be empty.');
-    return;
-  }
-
-  try {
-    const response = await fetch('process-login.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password, role }),
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      window.location.href = result.redirect;
-    } else {
-      alert(result.message);
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert('An error occurred. Please try again.');
-  }
-});
-*/
      </script>
   </html>

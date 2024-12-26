@@ -45,7 +45,7 @@
                 <i class="fa-solid fa-house"></i>
                 <span class="option p-lg-2"><b>Home</b></span>
               </a>
-              <a href="#" target="_self">
+              <a href="{{ route('prodlist') }}" target="_self">
                 <i class="fa-solid fa-suitcase"></i>
                 <span class="option p-lg-2"><b>Product</b></span>
               </a>
@@ -57,7 +57,7 @@
                 <i class="fa-solid fa-chart-line"></i>
                 <span class="option p-lg-2"><b>Finance</b></span>
               </a>
-              <a href="#" target="_self">
+              <a href="{{ route('inventory') }}" target="_self">
                 <i class="fa-solid fa-plus"></i>
                 <span class="option p-lg-2"><b>Add Product</b></span>
               </a>
@@ -65,11 +65,11 @@
                 <i class="fa-solid fa-gear"></i>
                 <span class="option p-lg-2"><b>Settings</b></span>
               </a>
-              <a href="/html/reg-form.html" target="_self">
+              <a href="{{ route('register') }}" target="_self">
                 <i class="fa-solid fa-user"></i>
                 <span class="option p-lg-2"><b>Create Cashier Account</b></span>
               </a>
-              <a href="/html/log-in.html" target="_self">
+              <a href="{{ route('home') }}" target="_self">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span class="option p-lg-2"><b>Log Out</b></span>
               </a>
